@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="port.css"> 
+    </head>
+    <body>
+<div class="home">
+        <nav>
+            <ul class="nav nav-pills">
+                <li><a href="#">Home</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 class="col-md-8 col-md-offset-2 text-center">WEB DEVELOPMENT </h1>
+        <div class="social col-md-4 col-md-offset-4">
+            <a href="https://github.com/Jansi-86" target="_blank"><img src="https://i.imgur.com/MNw8yAW.png"></a>
+            <a href="https://www.linkedin.com/in/Jansi Tirumala Mattam" target="_blank"><img src="https://i.imgur.com/7WOBoX6.png"></a>
+            <a href="https://www.freecodecamp.com/jansi" target="_blank"><img src="https://i.imgur.com/9dNLvu5.png"></a>
+        </div>
+        <a class="btn col-md-offset-6" href="#skill">&#8964;</a>
+            <div class="about" id="about">
+                <div class="container">
+                    <h2 class="text-center me">ABOUT ME</h2>
+                    <hr>
+                    <img src="port.jpg" class="col-md-3 img-circle">
+                    <h2 class="col-md-9 hello">HELLO, I'M JANSI TIRUMALA</h2>
+                    <h2 class="col-md-7">I'm a self taught web designer, developer. Competences: Languages and Frameworks: Javascript, HTML5, CSS3.
+                    <h2>  I'm Electrical student at vasireddy venkatadri institute of technology.  </h2> 
+                </h2>
+                </div>
+            </div>
+<div class="skills" id="skill">
+    <div class="container">
+        <h2 class="text-center">SKILLS</h2>
+        <hr>
+        <p class="text-center">This is programming languages and frameworks that I used in my projects.</p>
+        <div class="html col-md-3 text-center">
+            <img src="html.jpg">
+            <h4>HTML5</h4>
+            <hr>
+            <p class="text-justify"><b>HyperText Markup Language</b>, commonly abbreviated as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology used to create web pages, as well as to create user interfaces for mobile and web applications.</p>
+        </div>
+        <div class="css col-md-3 text-center">
+            <img src="css.jpg">
+            <h4>CSS3</h4>
+            <hr>
+            <p class="text-justify"><b>Cascading Style Sheets (CSS)</b> is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML, the language can be applied to any XML document.</p>
+        </div>
+        <div class="js col-md-3 text-center">
+            <img src="js.jpg">
+            <h4>JAVASCRIPT</h4>
+            <hr>
+            <p class="text-justify"><b>JavaScript</b> is a high-level, dynamic, untyped, and interpreted programming language. Alongside HTML and CSS, it is one of the three core technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern Web browsers without plug-ins.</p>
+        </div>
+    </div>
+</div>
+    <script>
+    $(document).ready(function(){
+
+        $(document).scroll(function(){
+    var scrool = $(document).scrollTop();
+    var sliba = $('#skill').offset().top - 300;
+    if(scrool >= sliba ) {
+    
+          $(".skills img").fadeIn(1200)
+        
+        }
+    });
+    $('.laptop img').bind('mouseenter mouseleave', function() {
+        $(this).attr({
+            src: $(this).attr('data-other-src') 
+            , 'data-other-src': $(this).attr('src') 
+        })
+    });
+    
+    $('.laptop img').on('click' , function(){
+        
+        var slika = $(this).attr('value');
+        $('.popup').fadeIn(200);
+        $('.' + slika).fadeIn(200);
+        $('.close').on('click',function(){
+        $('.popup').slideUp(200);
+        $('.' + slika).slideUp(200);
+    })
+    
+    })
+    });
+    </script>
+    </body>
+    </html>
